@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio site for Christian B. Martinez"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      src="./assets/js/particle-image.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      ;(function () {
+        emailjs.init('user_ZqTkxH9x7lpssb7A9r9hM')
+      })()
+    </script>
+    <script type="text/javascript">
+      window.onload = () => {
+        document
+          .getElementById('contact-form')
+          .addEventListener('submit', function (event) {
+            event.preventDefault()
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0
+            // these IDs from the previous steps
+            emailjs
+              .sendForm(
+                'service_kq06veu',
+                'template_x5oo4ci',
+                this,
+                'user_ZqTkxH9x7lpssb7A9r9hM'
+              )
+              .then(
+                function () {
+                  console.log('SUCCESS!')
+                },
+                function (error) {
+                  console.log('FAILED...', error)
+                }
+              )
+          })
+      }
+    </script>
+    <title>Christian Martinez | Portfolio Site</title>
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <div class="logo">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.07 21.5">
+            <path
+              class="cbm-logo"
+              d="M16,29.93c4.57-1.69,9.77-8.19,6.57-13.15-2.94-4.55-10.18-2.09-13.79.15C4.15,19.8.12,26.1,2.77,31.57,5.91,38.06,15.08,35.68,20,32.89a20.51,20.51,0,0,0,7.46-6.78A14,14,0,0,0,29,15.48l-4.45,1.6a18.39,18.39,0,0,1,5.82,13.26c.08,2.2,3.86,1.46,4.54,0,.52-1.11.81-2.34,1.27-3.48s1-2.5,1.65-3.72a53.15,53.15,0,0,1,4.07-6.86H37.31a27.2,27.2,0,0,0,0,11.64,10.46,10.46,0,0,0,7,7.06,3.31,3.31,0,0,0,3.27-.87A1.19,1.19,0,0,0,47,32,7.86,7.86,0,0,1,41.81,26,26.71,26.71,0,0,1,42,15.84c.2-1-1.08-1.36-1.8-1.36a3.28,3.28,0,0,0-2.74,1.38,53.15,53.15,0,0,0-4.07,6.86c-.57,1.15-1.09,2.32-1.57,3.51s-.8,2.52-1.35,3.69H35c-.18-5.66-2-10.88-6.23-14.8-1.15-1.06-4.94-.49-4.45,1.61a11.62,11.62,0,0,1-4.13,12.16,16.51,16.51,0,0,1-6,3.14c-2,.55-4.39,1-6-.6C5,28.16,7.12,22.73,10.06,20.09A10.91,10.91,0,0,1,14,17.83c1-.33,2.65-.63,3.52,0,1.56,1.16,1.43,3.44.84,5.09A7.24,7.24,0,0,1,14,27.45c-.84.31-1.76,1.35-1.14,2.23s2.27.57,3.12.25Z"
+              transform="translate(-1.92 -14.22)"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div
+          id="particle-image"
+          data-params-src="./assets/js/params.json"
+        ></div>
+      </section>
+      <section id="about">
+        <div class="about-wrapper">
+          <div class="about-left">
+            <div class="about-left-content">
+              <div>
+                <div class="shadow">
+                  <div class="about-img">
+                    <img
+                      src="./assets/img/me.jpg"
+                      alt="Image of Christian B. Martinez"
+                    />
+                  </div>
+                </div>
+                <h2>Christian Martinez</h2>
+                <h3>Full Stack Developer</h3>
+              </div>
+              <ul class="icons">
+                <li>
+                  <a href="https://twitter.com/_coderchris" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/christianbmartinez"
+                    target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/_coderchris" target="_blank"
+                    ><i class="fab fa-codepen"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@coderchris" target="_blank"
+                    ><i class="fab fa-tiktok"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-right">
+            <h1>ABOUT<span>&nbsp;ME</span></h1>
+            <div class="about-paragraph">
+              <p>
+                Hey there! <span class="emoji">🖐</span> I'm Christian, I build
+                apps for the web. I have been coding for around 6 years.
+                Initially, learning code was a hobby i would do in my free time.
+                It wasn't long before my love of coding would turn into a
+                passion of mine. Recently, i decided to take action and pursue a
+                tech career. The first step i took was becoming a student at
+                University of Utahs coding bootcamp, where we are learning full
+                stack web development. Follow me on twitter to stay up to date
+                on my coding journey!
+              </p>
+            </div>
+            <div class="about-btns">
+              <button type="button" class="btn btn-pink">
+                <a href="./assets/img/Resume_.pdf" target="_blank">RESUME</a>
+              </button>
+              <button type="button" class="btn btn-white">
+                <a href="mailto:hello@christianbmartinez.com?subject=Inquiry"
+                  >CONTACT</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="portfolio-title">
+          <h1>PORT<span>FOLIO</span></h1>
+          <p class="paragraph">Browse through my most recent projects</p>
+        </div>
+        <div class="portfolio-wrapper">
+          <div class="item-1">
+            <div class="portfolio-icons">
+              <h1>Twitter Bot</h1>
+              <a href="https://twitter.com/chaoticmuchbot" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://github.com/christianbmartinez/chaoticmuchbot"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="portfolio-icons">
+              <h1>Colorfill App</h1>
+              <a
+                href="https://codepen.io/_coderchris/pen/KKgyywR"
+                target="_blank"
+                ><i class="fab fa-codepen"></i
+              ></a>
+              <a
+                href="https://github.com/christianbmartinez/colorfill"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="item-3">
+            <div class="portfolio-icons">
+              <h1>Portfolio Site</h1>
+              <a href="https://www.christianbmartinez.com" target="_blank"
+                ><i class="fa fa-eye"></i
+              ></a>
+              <a
+                href="https://github.com/christianbmartinez/cbm_2022"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="item-4">
+            <div class="portfolio-icons">
+              <h1>Voice App</h1>
+              <a
+                href="https://codepen.io/_coderchris/pen/GRreoLW"
+                target="_blank"
+                ><i class="fab fa-codepen"></i
+              ></a>
+              <a
+                href="https://github.com/christianbmartinez/speech-to-text-app"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="item-5">
+            <div class="portfolio-icons">
+              <h1>Mmbc Site</h1>
+              <a href="https://www.mmbc.llc/" target="_blank"
+                ><i class="fa fa-eye"></i
+              ></a>
+              <a
+                href="https://github.com/christianbmartinez/mmbc"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact-title">
+          <h1>CONT<span>ACT</span></h1>
+          <p class="paragraph">Questions? Contact me anytime</p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <form id="contact-form">
+              <input type="hidden" name="contact_number" />
+              <input
+                name="user_name"
+                type="text"
+                class="form-input"
+                placeholder="Name"
+                id="form-name"
+              />
+              <input
+                name="from_name"
+                type="email"
+                class="form-input"
+                placeholder="Email"
+                id="form-email"
+              />
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Message"
+                id="form-message"
+              ></textarea>
+              <input type="submit" value="Send" />
+            </form>
+            <div class="success-message">
+              <p>Thanks for your message! I will get back to you soon. 😊</p>
+            </div>
+          </div>
+          <div class="contact-details">
+            <ul>
+              <li>
+                <i class="fa fa-map-marker fa-2x"
+                  ><span class="contact-text">SLC, Utah</span></i
+                >
+              </li>
+
+              <li>
+                <i class="fa fa-phone fa-2x"
+                  ><span class="contact-text"
+                    ><a href="tel:1-212-555-5555" title="Give me a call"
+                      >(801)-645-1924</a
+                    ></span
+                  ></i
+                >
+              </li>
+
+              <li>
+                <i class="fa fa-envelope fa-2x"
+                  ><span class="contact-text"
+                    ><a
+                      href="mailto:hello@christianbmartinez.com?subject=Inquiry"
+                      title="Send me an email"
+                      >hello@christianbmartinez.com</a
+                    ></span
+                  ></i
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <button class="scroll-to-top">☝️</button>
+    </main>
+    <footer>
+      <p>
+        &copy;&nbsp;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        Christian B. Martinez
+      </p>
+    </footer>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
