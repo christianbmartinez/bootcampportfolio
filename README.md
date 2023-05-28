@@ -17,5 +17,3 @@ HTML, CSS, JS, EMAILJS, PARTICLE IMAGE JS
 - Scroll to top button
 - Success message when the form is sent shows for 5 seconds then disappears
 - Responsive on mobile/tablet
-
-[View live](https://bootcampportfolio.christianbmartinez.com/)
